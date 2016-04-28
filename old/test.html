@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Test tha fucker</title>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	if(typeof jQuery === 'undefined') {
+		// console.log('using local version');
+		document.write(unescape("%3Cscript src='js/jquery.js' %3E%3C/script%3E"));
+	}
+	</script>
+	
+	
+</head>
+<body>
+<h1>just an AJAX test</h1>
+
+<script>
+// localStorage.removeItem('localData');
+
+$(document).ready(function() {
+
+	if(!localStorage.localData  || !typeof JSON.parse(localStorage.localData) === 'object') {
+		
+		localStorage.removeItem('localData');
+
+	//Get data
+		$.getJSON('ports.json', function(data) {
+		//Save local
+			localStorage['localData'] = JSON.stringify(data);
+			console.log('data saved local');
+		}, false);
+	}
+})
+	
+</script>
+</body>
+</html>

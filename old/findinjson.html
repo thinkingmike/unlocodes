@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+
+	<title>UNLOCODES</title>
+
+	<!-- <link href="css/reset.css" rel="stylesheet"> -->
+	<link href="css/form.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	if(typeof jQuery === 'undefined') {
+		// console.log('using local version');
+		document.write(unescape("%3Cscript src='js/jquery.js' %3E%3C/script%3E"));
+	}
+	</script>
+
+	<script src = 'js/unlo.js'></script>
+
+</head>
+<body>
+
+<form>
+	<h1>UNLOCODES</h1>
+
+	<div class="label">
+		<input type="text" name="lblCountryID" id="lbCountryID" class="lblCountryID" maxlength="2" autofocus />
+		<input type="text" name="lblPortID" id="lblPortID" class="lblPortID" maxlength="3"  />
+	</div>
+
+	<!-- <div class="dropdowns"> -->
+		<input type="text" id="lstCountry"  class ="lstCountry" />
+		<input type="text" id="lstPort" class ="lstPort" />
+	<!-- </div> -->
+
+	<select id='dropdown'></select>
+
+	<!-- <div id="message"></div> -->
+
+</form>
+
+<div id = 'outputCountryName'></div>
+<div id = 'outputPortName'></div>
+
+<!--<script>
+// //Hack to avoid error message in FF console for local json file
+// $.ajaxSetup({beforeSend: function(xhr)  {
+// 	if (xhr.overrideMimeType) {
+// 		xhr.overrideMimeType("application/json");
+// 		}
+// 	}
+// });
+
+
+// $(document).ready(function() {
+// 	console.log('init');
+	
+// 	//Initial Settings
+// 	countryID.value = "",portID.value = "", labelCountry.value = "",labelPort.value="";
+
+// 	$('#dropdown').hide();
+// });
+
+
+
+// var countryID = document.getElementById('lbCountryID');
+// var portID = document.getElementById('lblPortID');
+
+// var labelCountry = document.getElementById('lstCountry');
+// var labelPort = document.getElementById('lstPort');
+
+// var dropdown = document.getElementById('dropdown');
+// var message = document.getElementById('message');
+
+// var ports = [];
+
+// //EventListeners
+// countryID.addEventListener('keyup',findCountryName,false);
+// portID.addEventListener('keyup',findPortName,false);
+
+// labelCountry.addEventListener('keyup', getListCountries, false);
+// labelCountry.addEventListener('click', clearLabel, false);
+
+// labelPort.addEventListener('keyup', getPortID, false);
+
+// dropdown.addEventListener('click', setLabelfromDropDown, false);
+
+
+// function findCountryName() {
+
+// 	if(countryID.value.length == 2) {
+// 		portID.focus();
+		
+// 		var blnFound;
+
+// 		$.getJSON('ports.JSON', function (data) {
+// 			$.each(data.UNLOCODE, function() {
+// 				$.each(this, function() {
+// 					if(this.ID == countryID.value.toUpperCase()) {
+// 						labelCountry.value = this.name;
+						
+// 						blnFound = !blnFound;
+
+// 						 ports = this.port;
+// 					}
+// 				})
+// 			})
+
+// 			if(!blnFound) {
+// 				labelCountry.value = 'no country ' + countryID.value.toUpperCase();
+// 				countryID.focus();
+// 			}
+// 		}); 
+// 	}
+// }
+
+// function findPortName() {
+
+// 	if(typeof ports === 'undefined') {
+// 		labelPort.value = ('No ports in ' + labelCountry.value);
+// 	}
+
+// 	else {
+// 		if(portID.value.length == 3) {
+
+// 			var blnFound;
+
+// 			$.each(ports, function() {		
+// 				if(this.ID == portID.value.toUpperCase()) {
+// 				labelPort.value = this.name;
+
+// 				blnFound = !blnFound;
+// 				}			
+// 			})
+
+// 			if(!blnFound) {
+// 				labelPort.value = 'Port ' + portID.value.toUpperCase() + ' not found.';
+// 			}
+// 		}
+// 	}
+// }
+
+// function setLabelfromDropDown () {
+	
+// 	labelCountry.value = dropdown.options[dropdown.selectedIndex].text;
+
+// 	$('#dropdown').hide();
+// 	getCoutryId();
+// }
+
+// function getCoutryId() {
+
+// 	labelPort.focus();
+// 	portID.value = "", labelPort.value = "";
+
+// 	$.getJSON('ports.JSON', function (data) {
+// 		$.each(data.UNLOCODE, function() {
+// 			$.each(this, function() {
+// 				if(this.name == labelCountry.value.toUpperCase()) {
+// 					countryID.value = this.ID;
+
+// 					ports = this.port;
+
+// 					var select = document.getElementById('dropdown');
+// 					select.innerHTML = "";
+
+// 					$('#dropdown').show();
+// 					$('#dropdown').attr('size',15);
+// 					$('#dropdown').focus();
+
+// 					for(var i = 0; i < ports.length; i++) {
+// 						var opt = document.createElement('option');
+// 						opt.innerHTML = ports[i].name;
+// 						opt.value = i;
+
+// 						select.appendChild(opt);
+// 					}
+// 				}
+// 			})
+// 		})
+// 	});
+// }
+
+// function getPortID() {
+// 	console.log('getportID function');
+// 	//TODO
+// }
+
+// function clearLabel () {
+// 	labelCountry.value = "";
+// }
+
+// function getListCountries() {
+
+// var countries = [];
+// strSearch = labelCountry.value;
+
+// 	$.getJSON('ports.json', function(data) {
+// 		$.each(data.UNLOCODE, function() {
+// 			$.each(this, function() {
+
+// 					if(this.name.indexOf(strSearch.toUpperCase()) != -1) {
+// 						countries.push(this.name);
+// 					}
+// 				})
+// 			})
+
+// 			if(countries.length == 1) {
+// 				labelCountry.value = countries[0];
+// 				$('#dropdown').hide();
+
+// 				getCoutryId();
+// 			}
+
+// 			else {
+// 				var select = document.getElementById('dropdown');
+// 				select.innerHTML = "";
+
+// 				$('#dropdown').show();
+// 				$('#dropdown').attr('size',countries.length);
+
+// 				for(var i = 0; i < countries.length; i++) {
+// 					var opt = document.createElement('option');
+// 					opt.innerHTML = countries[i];
+// 					opt.value = i;
+
+// 					select.appendChild(opt);
+// 				}
+// 		}
+// 	})
+// }
+
+
+</script>-->
+</body>
+</html>

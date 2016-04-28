@@ -1,0 +1,141 @@
+{
+  "country":
+    {
+      "name": "UNITED ARAB EMIRATES",
+      "ID": "AE",
+      "port": [
+        {
+          "name": "ABU AL BUKHOOSH",
+          "ID": "ABU"
+        },
+        {
+          "name": "ABU DHABI",
+          "ID": "AUH"
+        },
+        {
+          "name": "ABU MUSA",
+          "ID": "AMU"
+        },
+        {
+          "name": "AJMAN",
+          "ID": "AJM"
+        },
+        {
+          "name": "AL FUJAYRAH",
+          "ID": "FJR"
+        },
+        {
+          "name": "AR RUWAYS",
+          "ID": "RUW"
+        },
+        {
+          "name": "DAS ISLAND",
+          "ID": "DAS"
+        },
+        {
+          "name": "DIBBA",
+          "ID": "DBP"
+        },
+        {
+          "name": "DUBAI",
+          "ID": "DXB"
+        },
+        {
+          "name": "ESNNAD",
+          "ID": "END"
+        },
+        {
+          "name": "FATEH TERMINAL",
+          "ID": "FAT"
+        },
+        {
+          "name": "HULAYLAH TERMINAL",
+          "ID": "HTL"
+        },
+        {
+          "name": "JEBEL ALI",
+          "ID": "JEA"
+        },
+        {
+          "name": "JEBEL DHANNA",
+          "ID": "JED"
+        },
+        {
+          "name": "KALBA",
+          "ID": "KLB"
+        },
+        {
+          "name": "KHOR AL FAKKAN",
+          "ID": "KLF"
+        },
+        {
+          "name": "MINA KHALID",
+          "ID": "MKH"
+        },
+        {
+          "name": "MINA KHALIFA/ABU DHABI",
+          "ID": "KHL"
+        },
+        {
+          "name": "MINA SAQR",
+          "ID": "MSA"
+        },
+        {
+          "name": "MINA ZAYED/ABU DHABI",
+          "ID": "MZD"
+        },
+        {
+          "name": "MIRFA",
+          "ID": "RFA"
+        },
+        {
+          "name": "MUBAREK TERMINAL",
+          "ID": "MUB"
+        },
+        {
+          "name": "MUBARRAS ISLAND",
+          "ID": "MBS"
+        },
+        {
+          "name": "MUSSAFAH",
+          "ID": "AMF"
+        },
+        {
+          "name": "PORT RASHID",
+          "ID": "PRA"
+        },
+        {
+          "name": "RAS AL KHAIMAH",
+          "ID": "RKT"
+        },
+        {
+          "name": "SADIYAT ISLAND",
+          "ID": "SID"
+        },
+        {
+          "name": "SHARJAH",
+          "ID": "SHJ"
+        },
+        {
+          "name": "THE PALM JUMEIRAH",
+          "ID": "DUJ"
+        },
+        {
+          "name": "UMM AL NAR",
+          "ID": "ULR"
+        },
+        {
+          "name": "UMM AL QAIWAIN",
+          "ID": "QIW"
+        },
+        {
+          "name": "YAS ISLAND",
+          "ID": "YAS"
+        },
+        {
+          "name": "ZIRKU ISLAND",
+          "ID": "ZUR"
+        }
+      ]
+    }
+}

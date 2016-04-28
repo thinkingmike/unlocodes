@@ -1,0 +1,214 @@
+
+form {
+	/*width:50%;  */
+	  width:100%
+	height: 100%;
+	/*width:375px;     */
+	/*height:480px;  */
+	margin:0 auto;
+	margin-top: 5%;
+	
+	display:flex;
+	flex-direction:column;
+
+	
+	/*border:1px solid #09b;*/
+	/*background-image: -webkit-linear-gradient(left, white 15%, #FAFAFA 30%,#F0F0F0 60%, white);*/
+
+}
+
+.main {
+	/*height: 42vh;*/
+}
+
+.found {
+	/*background-image: -webkit-linear-gradient(left, white 15%, #FAFAFA 30%,#EEEEEE 60%, white);*/
+	margin-left: 5%;
+	height: 65vh;
+
+}
+
+h1 {
+	/* Reset */
+	margin:0;
+	padding:0;
+
+	/* Actual Values */
+	/*margin-left: 5%;*/
+	/*width: 90%;*/
+	padding:20px 0;
+	margin-bottom: 20px;
+	text-align: center;
+	background: #2011E9;
+	color: white;
+
+	border-radius: 15px;
+}
+
+/* Remove ugly glow when item is selected */
+input:focus {
+	outline-width: 0;
+}
+
+.label, .selectedCard, .message {
+	margin-left: 5%;
+}
+
+.label {
+	display: flex;
+}
+
+.lblCountryID, .lblPortID {
+	text-transform:uppercase;
+	/*color:#09b;	*/
+	text-align:center;
+	font-size: 2.0em;
+	width:55px;
+	margin-left: 10px;
+
+	height: 30px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.lblCountryID {
+	/*margin-left: 15%;*/
+}
+
+.lblPortID {
+	width: 80px;
+}
+
+.search {
+	position: relative;
+	overflow: :hidden;
+	float:right;
+	/*margin-left: 20px;*/
+	/*margin-right: 5%;*/
+	
+	/*border:1px solid green;*/
+	width: 0%;
+	min-width: 40px;
+	height: 40px;
+	margin-right: 40px;
+
+	-webkit-transition: width 0.5s;
+	-webkit-backface-visibility:hidden;
+}
+
+.search-icon {
+	background:url(../img/search.png);
+	background-size: 100% auto;
+	position: absolute;
+	/*top:0;*/
+	right: 5%;
+	float: right;
+	padding: 0;
+	margin: 0;
+
+	cursor: pointer;
+	z-index: 99;
+	
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+.search-box {
+	position: absolute;
+	top:0;
+	right:0;
+
+	width: 100%;
+	height: 100%;
+
+	z-index: 90;
+	background:#fff;
+	opacity: 0;
+
+	font-size:1.0em;
+
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+}
+
+.search-expanded {
+	width: 80%;
+}
+
+.search-box-expanded {
+	opacity: 1;
+
+	/*z-index: 99;*/
+}
+
+.search-icon-expanded {
+	/*opacity: 0;*/
+}
+
+.lbl-expanded {
+	opacity: 0;
+}
+
+
+
+
+
+.search-value:focus {
+	text-align: left;
+}
+
+.message {
+	font-size: 1.5em;
+	padding-left: 10%;
+}
+
+.found, ul {
+	overflow:scroll;
+	-webkit-overflow-scrolling:touch;
+}
+
+.card {
+	/* Reset */
+	margin:0;
+}
+
+ul.card {
+	list-style-type: none;
+	padding: 0;
+	margin-left: 0;
+}
+
+.selectedCard {
+	width:90%;
+	margin-left: 0;
+	/*border-top: 1px solid #999;*/
+	border-bottom: 1px solid #999;
+}
+
+ul.card li {
+	width: 90%;
+	/*border-top: 1px solid #999;*/
+	border-bottom: 1px solid #999;
+}
+
+.selectedCard h3, ul.card li h3 {
+	font-size: 2.0em;
+	color: #2011E9;
+}
+
+.selectedCard p, ul.card li p {
+	margin-left: 10px;
+	font-size: 1.5em;
+}
+
+.message {
+	width: 75%;
+	/*color: red;*/
+	border-bottom: 1px solid #999;
+	padding-bottom: 5px;
+}
+
+
+
